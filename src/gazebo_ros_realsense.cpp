@@ -60,8 +60,8 @@ void GazeboRosRealsense::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
 
   // set 'png' compression format for depth images
   // default functional parameters for compressed_image_transport to have lossless png compression
-  rosnode_->setParam(rosnode_->resolveName(cameraParamsMap_[DEPTH_CAMERA_NAME].topic_name) + "/compressed/format", "png");
-  rosnode_->setParam(rosnode_->resolveName(cameraParamsMap_[DEPTH_CAMERA_NAME].topic_name) + "/compressed/png_level", 1);
+  //node_->setParam(node_->resolveName(cameraParamsMap_[DEPTH_CAMERA_NAME].topic_name) + "/compressed/format", "png");
+  //node_->setParam(node_->resolveName(cameraParamsMap_[DEPTH_CAMERA_NAME].topic_name) + "/compressed/png_level", 1);
 
   this->color_pub_ = this->itnode_->advertiseCamera(
     cameraParamsMap_[COLOR_CAMERA_NAME].topic_name, 2);
